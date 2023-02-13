@@ -11,17 +11,24 @@ Iternate through the dictionary to print out their name and thier new salary (as
 import csv
 
 #open the file
+infile = open("employee_data.csv", "r")
 
+employee = csv.load(infile)
 
-
+csvreader = csv.reader(infile, delimiter = (','))
 
 #create an empty dictionary
+employee_data = {}
 
+name = ''
 
 #use a loop to iterate through the csv file
-
+for employee_data in csvreader:
+    outfile.write(employee_data[1] + '' + employee_data[2] + '' + employee_data[5])
 
     #check if the employee fits the search criteria
+    if name in employee_data:
+        print(employee_data[1] + employee_data[5]*1.1)
 
 
     
@@ -31,11 +38,15 @@ print('=========================================')
 print()
 
 #iternate through the dictionary and print out the key and value as per printout
+for employee in employee_data:
+    if employee in employee_data:
+        print(f"Manager Name: {employee["instnm"]})")
+        print(f"Salary: {employee["name"]}")
 
 
 
           
-        
-
-        
+     
     
+infile.close()
+outfile.close()
